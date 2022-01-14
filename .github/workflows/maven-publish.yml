@@ -32,6 +32,8 @@ jobs:
       working-directory: "springboot-app"
       run: mvn -B test --file pom.xml  
       
+    - name: report
+      working-directory: "springboot-app"
     - run: mvn surefire-report:report 
     - name: Publish Test Report
       uses: mikepenz/action-junit-report@v2
